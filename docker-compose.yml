@@ -1,0 +1,19 @@
+version: '3.4'
+services:
+  order-generation-service:
+    image: order-generation-service
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+    ports:
+      - 80:80
+  order-persistence-service:
+    image: order-persistence-service
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+    ports:
+      - 81:80
+
