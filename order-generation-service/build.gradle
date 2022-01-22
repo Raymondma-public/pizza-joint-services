@@ -20,7 +20,7 @@ dependencies {
 test {
 	useJUnitPlatform()
 }
-jar {
-	enabled = true
-	archiveClassifier = '' //use empty string
+
+bootJar {
+	archiveFileName = "${archiveBaseName.get()}.${archiveExtension.get()}"
 }
