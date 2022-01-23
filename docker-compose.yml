@@ -8,6 +8,8 @@ services:
         condition: on-failure
     ports:
       - 80:80
+    depends_on:
+      - order-persistence-service
   order-persistence-service:
     image: order-persistence-service
     deploy:
