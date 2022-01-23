@@ -13,6 +13,14 @@ repositories {
 }
 
 dependencies {
+
+
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+	// https://mvnrepository.com/artifact/io.github.openfeign/feign-annotation-error-decoder
+	implementation 'io.github.openfeign:feign-annotation-error-decoder:11.8'
+	// https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-openfeign
+	implementation 'org.springframework.cloud:spring-cloud-starter-openfeign:3.1.0'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
