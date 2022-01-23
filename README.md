@@ -2,6 +2,7 @@
 
 A prototype of the backend for pizza joint ordering backend system.
 
+***This project is under development, please do not use for production use
 
 
 # Description
@@ -26,6 +27,8 @@ Two services are involved in the project:
         *  201 created: Order is successfully created
         *  4xx bad request: user input is invalid, order have not been created
 
+* This is the sample result in H2 database, you may login to embedded H2 database through url `http://localhost:81/h2-console/` with JDBC URL `jdbc:h2:mem:orderdb`,default account `app` and password `password`
+![alt text](h2-login.png)
 ![alt text](db_result_sample.png)
 
 # Prerequisite
