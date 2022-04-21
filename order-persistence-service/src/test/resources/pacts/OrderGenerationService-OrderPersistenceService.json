@@ -1,0 +1,59 @@
+{
+  "consumer": {
+    "name": "OrderGenerationService"
+  },
+  "interactions": [
+    {
+      "description": "add order request without body",
+      "providerStates": [
+        {
+          "name": "add order request without body"
+        }
+      ],
+      "request": {
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "method": "POST",
+        "path": "/order"
+      },
+      "response": {
+        "status": 400
+      }
+    },
+    {
+      "description": "add order request",
+      "providerStates": [
+        {
+          "name": "add order request"
+        }
+      ],
+      "request": {
+        "body": {
+          "name": "raymond",
+          "price": 12.25,
+          "quantity": 1
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "method": "POST",
+        "path": "/order"
+      },
+      "response": {
+        "status": 201
+      }
+    }
+  ],
+  "metadata": {
+    "pact-jvm": {
+      "version": "4.2.9"
+    },
+    "pactSpecification": {
+      "version": "3.0.0"
+    }
+  },
+  "provider": {
+    "name": "OrderPersistenceService"
+  }
+}

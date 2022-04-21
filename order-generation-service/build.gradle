@@ -23,10 +23,14 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	// contract test
+	testImplementation 'au.com.dius.pact.consumer:junit5:4.2.9'
 }
 
 test {
 	useJUnitPlatform()
+	systemProperties['pact.rootDir'] = "$buildDir/custom-pacts-directory"
 }
 
 bootJar {
